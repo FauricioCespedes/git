@@ -11,6 +11,9 @@ git config --global alias.l 'log --pretty=format:"%C(bold yellow)%h%C(reset) - %
 ### Git Fetch Prune
 git config --global alias.fp 'fetch --prune'
 
+### Git Branch
+git config --global alias.br 'branch'
+
 ### Git Add & Commit
 git config --global alias.ac '!git add -A && git commit -m'
 
