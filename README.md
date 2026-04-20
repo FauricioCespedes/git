@@ -2,9 +2,17 @@
 
 ## Alias
 
-### Git Log
-
-git config --global alias.l "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
-
 ### Git Status
 git config --global alias.s "status -s"
+
+### Git Log
+git config --global alias.l 'log --pretty=format:"%C(bold yellow)%h%C(reset) - %C(cyan)%cr%C(reset) - %s"'
+
+### Git Fetch Prune
+git config --global alias.fp 'fetch --prune'
+
+### Git Add & Commit
+git config --global alias.ac '!git add -A && git commit -m'
+
+### Git Branch Cleaning Up
+git config --global alias.bc '!git fetch -p && git branch -vv | awk "/: gone]/{print \$1}" | xargs -r git branch -d'
