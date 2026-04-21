@@ -5,8 +5,11 @@
 ### Git Status
 git config --global alias.s "status -s"
 
-### Git Log
-git config --global alias.l 'log --pretty=format:"%C(bold yellow)%h%C(reset) - %C(cyan)%cr%C(reset) - %s"'
+### Alias git l
+git config --global alias.l 'log -n 10 --pretty=format:"%C(bold yellow)%h%C(reset) %C(cyan)(%cr)%C(reset) %C(auto)%d%C(reset) %s"'
+
+### Alias git lg
+git config --global alias.lg 'log --pretty=format:"%C(bold yellow)%h%C(reset) %C(cyan)(%cr)%C(reset) %C(auto)%d%C(reset) %s"'
 
 ### Git Fetch Prune
 git config --global alias.fp 'fetch --prune'
